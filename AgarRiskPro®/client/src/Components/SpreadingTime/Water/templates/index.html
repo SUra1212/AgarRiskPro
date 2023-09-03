@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Disease Spreading Time Duration Predictor</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Disease Spreading Time Duration Predictor</div>
+        <form action="/" method="POST">
+            <div class="form">
+
+                <div class="inputfield">
+                    <label for="Disease">Disease</label>
+                    <div class = "custom_select">
+                        <select name="Disease" id="Disease">
+                            <option value="" selected hidden>Select</option>
+                            <option value="acer">Anthracnose</option>
+                            <option value="apple">Dieback</option>
+                            <option value="asus">Leaf spot</option>
+                            <option value="dell">Root rot</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="inputfield">
+                    <label for="Temperature">Temperature()</label>
+                    <input class="input" type="text" name="Temperature" required>
+                </div>    
+                <div class="inputfield">
+                    <label for="Humidity">Humidity (%)</label>
+                    <input class="input" type="text" name="Humidity" required>
+                </div> 
+                <div class="inputfield">
+                    <label for="Rainfall">Rainfall (mm)</label>
+                    <input class="input" type="text" name="Rainfall" required>
+                </div>
+                
+                <div class="inputfield">
+                    <label for="Moisture">Moisture (%)</label>
+                    <input class="input" type="text" name="Moisture" required>
+                </div>
+                
+                <div class="inputfield">
+                    <label for="Windspeed">Wind Speed (m/s)</label>
+                    <input class="input" type="text" name="Windspeed" required>
+                </div>
+
+       
+                                 
+                <div class="inputfield">
+                    <input class="btn" type="submit" value="Predict Spreading Time">
+                </div>
+            </div>
+        </form>
+
+        <div class="result">
+
+            <p>Estimated Spreading Time(days) : {{pred_value}}</p>
+
+        </div>
+    </div>
+</body>
+</html>
